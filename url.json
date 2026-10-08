@@ -1,7 +1,5 @@
 {
-  "url": "https://admin.localhost.run",
-  "updated_utc": "2026-10-08T10:17:18.885228+00:00",
-  "access": "viewer password required",
-  "transport": "localhost.run free relay pilot; hostname can change",
-  "ready": true
+  "ready": false,
+  "url": "https://rljech13.github.io/chicken-cre-atlas/",
+  "message": "The protected viewer is reconnecting. Please retry shortly."
 }
