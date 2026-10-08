@@ -1,7 +1,8 @@
 {
   "url": "https://conscious-dude-comics-msg.trycloudflare.com",
   "ready": true,
-  "updated_utc": "2026-10-08T10:56:38.508312+00:00",
+  "updated_utc": "2026-10-08T13:39:33.150351+00:00",
   "access": "viewer password required",
-  "transport": "temporary Cloudflare route through owner Mac; requires Mac online"
+  "transport": "temporary Cloudflare route through owner Mac; requires Mac online",
+  "entry_version": 2
 }

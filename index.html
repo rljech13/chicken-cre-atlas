@@ -1,1 +1,42 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Chicken CRE atlas</title><style>body{margin:0;background:#111d28;color:#e5f0f8;min-height:100vh;display:grid;place-items:center;font:16px/1.6 system-ui}main{max-width:540px;margin:24px;padding:28px;background:#1a2b3c;border:1px solid #37566f;border-radius:12px}h1{font-size:28px}a{color:#87ccff}small{color:#a3bed1}</style></head><body><main><h1>Chicken CRE atlas</h1><p id="state">Connecting to the protected atlas…</p><p><a id="open" hidden>Open atlas</a></p><small>This permanent entry point connects to the current HTTPS viewer. An access password is required. Research data are read-only.</small></main><script>const state=document.getElementById('state'),link=document.getElementById('open');fetch('url.json?v='+Math.floor(Date.now()/30000),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('The current viewer address is unavailable. Please retry shortly.');return r.json();}).then(d=>{if(d.ready===false)throw Error(d.message||'The atlas viewer is reconnecting. Please retry shortly.');const url=new URL(d.url);if(url.protocol!=='https:'||!['.trycloudflare.com','.lhr.life','.localhost.run'].some(s=>url.hostname.endsWith(s)))throw Error('Viewer address did not pass validation.');let target=new URLSearchParams(location.search).get('target')||'/';if(!target.startsWith('/')||target.startsWith('//')||target.includes('\\')||/[\r\n]/.test(target))target='/';const result=new URL(target,url);if(result.origin!==url.origin)throw Error('Invalid atlas target.');link.href=result.href;link.hidden=false;state.textContent='Opening the protected atlas…';location.replace(result.href);}).catch(e=>{state.textContent=e.message;});</script></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Chicken CRE atlas</title>
+<style>body{margin:0;background:#111d28;color:#e5f0f8;min-height:100vh;display:grid;place-items:center;font:16px/1.6 system-ui}main{max-width:540px;margin:24px;padding:28px;background:#1a2b3c;border:1px solid #37566f;border-radius:12px}h1{font-size:28px}a{color:#87ccff}small{color:#a3bed1}button{font:inherit;cursor:pointer;color:#e5f0f8;background:#294961;border:1px solid #58778c;border-radius:6px;padding:7px 14px}</style></head>
+<body><main><h1>Chicken CRE atlas</h1><p id="state" role="status">Open the protected viewer below. Checking the current address…</p>
+<p><a id="open" href="https://conscious-dude-comics-msg.trycloudflare.com/login">Open atlas</a> · <button id="retry" type="button">Retry connection</button></p>
+<noscript><p>Use Open atlas to sign in. JavaScript is needed only to refresh the viewer address automatically.</p></noscript>
+<small>This permanent entry point connects to the current HTTPS viewer. An access password is required. Research data are read-only.</small></main>
+<script>
+const state=document.getElementById('state'),link=document.getElementById('open');
+let timer=null,inflight=false,attempt=0;
+function viewerTarget(address){
+  const url=new URL(address);
+  if(url.protocol!=='https:'||!url.hostname.endsWith('.trycloudflare.com')||url.username||url.password||url.port)throw Error('Viewer address did not pass validation.');
+  let target=new URLSearchParams(location.search).get('target')||'/';
+  if(!target.startsWith('/')||target.startsWith('//')||target.includes('\\')||/[\r\n]/.test(target))target='/';
+  const result=new URL(target,url);
+  if(result.origin!==url.origin)throw Error('Invalid atlas target.');
+  return result.href;
+}
+async function checkAddress(){
+  if(inflight)return;
+  inflight=true;clearTimeout(timer);attempt++;
+  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),7000);
+  let redirected=false;
+  try{
+    const response=await fetch('url.json?v='+Date.now(),{cache:'no-store',signal:controller.signal});
+    if(!response.ok)throw Error('Address refresh failed. Use Open atlas or retry.');
+    const data=await response.json();
+    if(data.ready!==true){state.textContent='Waiting for a new viewer address. Retrying automatically…';return;}
+    const target=viewerTarget(data.url);
+    link.href=target;state.textContent='Opening the protected atlas…';
+    location.replace(target);redirected=true;
+  }catch(error){state.textContent='Could not refresh the address. Use Open atlas or retry. Automatically retrying…';}
+  finally{
+    clearTimeout(timeout);inflight=false;
+    if(!redirected)timer=setTimeout(checkAddress,Math.min(5000*attempt,15000));
+  }
+}
+document.getElementById('retry').addEventListener('click',checkAddress);
+link.href=viewerTarget('https://conscious-dude-comics-msg.trycloudflare.com');
+checkAddress();
+</script></body></html>
