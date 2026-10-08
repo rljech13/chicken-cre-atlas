@@ -1,6 +1,7 @@
 {
-  "url": "https://prix-close-cooperative-assets.trycloudflare.com",
-  "updated_utc": "2026-10-08T09:39:44.604817+00:00",
+  "url": "https://admin.localhost.run",
+  "updated_utc": "2026-10-08T10:14:26.115091+00:00",
   "access": "viewer password required",
-  "transport": "Cloudflare Quick Tunnel pilot; hostname can change"
+  "transport": "localhost.run free relay pilot; hostname can change",
+  "ready": true
 }
