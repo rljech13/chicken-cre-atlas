@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Chicken CRE atlas</title>
 <style>body{margin:0;background:#111d28;color:#e5f0f8;min-height:100vh;display:grid;place-items:center;font:16px/1.6 system-ui}main{max-width:540px;margin:24px;padding:28px;background:#1a2b3c;border:1px solid #37566f;border-radius:12px}h1{font-size:28px}a{color:#87ccff}small{color:#a3bed1}button{font:inherit;cursor:pointer;color:#e5f0f8;background:#294961;border:1px solid #58778c;border-radius:6px;padding:7px 14px}</style></head>
-<body><main><h1>Chicken CRE atlas</h1><p id="state" role="status">Open the protected viewer below. Checking the current address…</p>
-<p><a id="open" href="https://replication-varies-vista-rocket.trycloudflare.com/login">Open atlas</a> · <button id="retry" type="button">Retry connection</button></p>
+<body><main><h1>Chicken CRE atlas</h1><p id="state" role="status">Open the protected viewer below. Checking the current server address…</p>
+<p><a id="open" href="https://ekutm-31-44-82-226.run.pinggy-free.link/login">Open atlas</a> · <button id="retry" type="button">Retry connection</button></p>
 <noscript><p>Use Open atlas to sign in. JavaScript is needed only to refresh the viewer address automatically.</p></noscript>
-<small>This permanent entry point connects to the current HTTPS viewer. An access password is required. Research data are read-only.</small></main>
+<small>This permanent entry point connects to the current HTTPS viewer. An access password is required. Research data are read-only. The viewer runs on the server. Free relay addresses renew periodically; use this entry point after a disconnection.</small></main>
 <script>
 const state=document.getElementById('state'),link=document.getElementById('open');
 let timer=null,inflight=false,attempt=0;
 function viewerTarget(address){
   const url=new URL(address);
-  if(url.protocol!=='https:'||!url.hostname.endsWith('.trycloudflare.com')||url.username||url.password||url.port)throw Error('Viewer address did not pass validation.');
+  if(url.protocol!=='https:'||!['.trycloudflare.com','.run.pinggy-free.link'].some(suffix=>url.hostname.endsWith(suffix))||url.username||url.password||url.port)throw Error('Viewer address did not pass validation.');
   let target=new URLSearchParams(location.search).get('target')||'/';
   if(!target.startsWith('/')||target.startsWith('//')||target.includes('\\')||/[\r\n]/.test(target))target='/';
   const result=new URL(target,url);
@@ -37,6 +37,6 @@ async function checkAddress(){
   }
 }
 document.getElementById('retry').addEventListener('click',checkAddress);
-link.href=viewerTarget('https://replication-varies-vista-rocket.trycloudflare.com');
+link.href=viewerTarget('https://ekutm-31-44-82-226.run.pinggy-free.link');
 checkAddress();
 </script></body></html>

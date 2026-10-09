@@ -1,8 +1,9 @@
 {
-  "url": "https://replication-varies-vista-rocket.trycloudflare.com",
+  "url": "https://ekutm-31-44-82-226.run.pinggy-free.link",
   "ready": true,
-  "updated_utc": "2026-10-08T23:54:27.530776+00:00",
+  "entry_version": 3,
+  "updated_utc": "2026-10-09T00:06:39.432876+00:00",
   "access": "viewer password required",
-  "transport": "temporary Cloudflare route through owner Mac; requires Mac online",
-  "entry_version": 2
+  "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
+  "requires_owner_Mac_online": false
 }
