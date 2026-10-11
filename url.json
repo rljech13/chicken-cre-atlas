@@ -1,9 +1,10 @@
 {
   "url": "https://ijefn-31-44-82-226.run.pinggy-free.link",
-  "ready": true,
+  "ready": false,
   "entry_version": 3,
-  "updated_utc": "2026-10-11T05:44:10.861150+00:00",
+  "updated_utc": "2026-10-11T06:41:34.680003+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false
+  "requires_owner_Mac_online": false,
+  "message": "The protected viewer is reconnecting. Retrying automatically."
 }
