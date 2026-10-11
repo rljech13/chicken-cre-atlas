@@ -1,9 +1,10 @@
 {
   "url": "https://udkva-31-44-82-226.run.pinggy-free.link",
-  "ready": true,
+  "ready": false,
   "entry_version": 3,
-  "updated_utc": "2026-10-10T23:52:04.169783+00:00",
+  "updated_utc": "2026-10-11T00:49:15.983797+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false
+  "requires_owner_Mac_online": false,
+  "message": "The protected viewer is reconnecting. Retrying automatically."
 }
