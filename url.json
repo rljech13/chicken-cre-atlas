@@ -1,10 +1,9 @@
 {
-  "url": "https://ofwiw-31-44-82-226.run.pinggy-free.link",
-  "ready": false,
+  "url": "https://bidzc-31-44-82-226.run.pinggy-free.link",
+  "ready": true,
   "entry_version": 3,
-  "updated_utc": "2026-10-15T22:44:34.515157+00:00",
+  "updated_utc": "2026-10-15T22:44:47.868345+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false,
-  "message": "The protected viewer is reconnecting. Retrying automatically."
+  "requires_owner_Mac_online": false
 }
