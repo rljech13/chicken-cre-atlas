@@ -1,10 +1,9 @@
 {
-  "url": "https://lyjtx-31-44-82-226.run.pinggy-free.link",
-  "ready": false,
+  "url": "https://rfhsb-31-44-82-226.run.pinggy-free.link",
+  "ready": true,
   "entry_version": 3,
-  "updated_utc": "2026-10-22T09:10:54.787753+00:00",
+  "updated_utc": "2026-10-22T09:11:26.411074+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false,
-  "message": "The protected viewer is reconnecting. Retrying automatically."
+  "requires_owner_Mac_online": false
 }
