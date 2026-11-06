@@ -1,10 +1,9 @@
 {
-  "url": "https://wdeha-31-44-82-226.run.pinggy-free.link",
-  "ready": false,
+  "url": "https://krrps-31-44-82-226.run.pinggy-free.link",
+  "ready": true,
   "entry_version": 3,
-  "updated_utc": "2026-11-06T16:53:48.416138+00:00",
+  "updated_utc": "2026-11-06T16:54:03.978036+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false,
-  "message": "The protected viewer is reconnecting. Retrying automatically."
+  "requires_owner_Mac_online": false
 }
