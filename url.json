@@ -1,10 +1,9 @@
 {
-  "url": "https://pkcsz-31-44-82-226.run.pinggy-free.link",
-  "ready": false,
+  "url": "https://ajvqt-31-44-82-226.run.pinggy-free.link",
+  "ready": true,
   "entry_version": 3,
-  "updated_utc": "2026-11-09T21:07:00.685255+00:00",
+  "updated_utc": "2026-11-09T21:07:11.809192+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false,
-  "message": "The protected viewer is reconnecting. Retrying automatically."
+  "requires_owner_Mac_online": false
 }
