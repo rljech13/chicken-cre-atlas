@@ -1,10 +1,9 @@
 {
-  "url": "https://xuvel-31-44-82-226.run.pinggy-free.link",
-  "ready": false,
+  "url": "https://rkikq-31-44-82-226.run.pinggy-free.link",
+  "ready": true,
   "entry_version": 3,
-  "updated_utc": "2026-11-15T14:24:57.344960+00:00",
+  "updated_utc": "2026-11-15T14:25:07.982677+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false,
-  "message": "The protected viewer is reconnecting. Retrying automatically."
+  "requires_owner_Mac_online": false
 }
