@@ -1,10 +1,9 @@
 {
-  "url": "https://ogpdh-31-44-82-226.run.pinggy-free.link",
-  "ready": false,
+  "url": "https://oyqal-31-44-82-226.run.pinggy-free.link",
+  "ready": true,
   "entry_version": 3,
-  "updated_utc": "2026-11-16T17:02:58.088916+00:00",
+  "updated_utc": "2026-11-16T17:03:13.337764+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false,
-  "message": "The protected viewer is reconnecting. Retrying automatically."
+  "requires_owner_Mac_online": false
 }
