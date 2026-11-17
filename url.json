@@ -1,10 +1,9 @@
 {
-  "url": "https://fkufw-31-44-82-226.run.pinggy-free.link",
-  "ready": false,
+  "url": "https://shooj-31-44-82-226.run.pinggy-free.link",
+  "ready": true,
   "entry_version": 3,
-  "updated_utc": "2026-11-17T12:07:07.384338+00:00",
+  "updated_utc": "2026-11-17T12:17:26.904739+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false,
-  "message": "The protected viewer is reconnecting. Retrying automatically."
+  "requires_owner_Mac_online": false
 }
