@@ -1,10 +1,9 @@
 {
-  "url": "https://xgfmi-31-44-82-226.run.pinggy-free.link",
-  "ready": false,
+  "url": "https://kppro-31-44-82-226.run.pinggy-free.link",
+  "ready": true,
   "entry_version": 3,
-  "updated_utc": "2026-11-20T23:45:21.462557+00:00",
+  "updated_utc": "2026-11-20T23:54:18.778449+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false,
-  "message": "The protected viewer is reconnecting. Retrying automatically."
+  "requires_owner_Mac_online": false
 }
