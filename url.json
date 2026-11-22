@@ -1,10 +1,9 @@
 {
-  "url": "https://lgfqi-31-44-82-226.run.pinggy-free.link",
-  "ready": false,
+  "url": "https://icxet-31-44-82-226.run.pinggy-free.link",
+  "ready": true,
   "entry_version": 3,
-  "updated_utc": "2026-11-22T11:48:11.274268+00:00",
+  "updated_utc": "2026-11-22T11:48:24.864705+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false,
-  "message": "The protected viewer is reconnecting. Retrying automatically."
+  "requires_owner_Mac_online": false
 }
