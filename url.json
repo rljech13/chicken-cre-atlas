@@ -1,10 +1,9 @@
 {
-  "url": "https://tqaxq-31-44-82-226.run.pinggy-free.link",
-  "ready": false,
+  "url": "https://osnwg-31-44-82-226.run.pinggy-free.link",
+  "ready": true,
   "entry_version": 3,
-  "updated_utc": "2026-11-22T21:56:59.036408+00:00",
+  "updated_utc": "2026-11-22T21:58:53.484971+00:00",
   "access": "viewer password required",
   "transport": "server-owned Pinggy free relay; renewed hourly; owner Mac not required",
-  "requires_owner_Mac_online": false,
-  "message": "The protected viewer is reconnecting. Retrying automatically."
+  "requires_owner_Mac_online": false
 }
